@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li style="font-family: fantasy; font-size: 1.5rem;"><a href="#" style="text-decoration: none; color: black;"><b>Sneakers</b></a></li>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+    <ul>
+        <li><a id="openCart" ><i class="fa-solid fa-cart-shopping" style="color: #6e6e6e;"></i></a></li>
+        <li><i class="fa-solid fa-user" style="color: #6e6e6e;"></i></li>
+        
+    </ul>
+</nav>
+<div class="product-container">
+    <!-- First Product -->
+    <div class="product"  style="margin-top: 50px;">
+        <div class="images" style="width: 50%;">
+            <div class="product-main-image">
+                <img id="mainImage1" src="Media/panda1.png" alt="Main Image" onclick="openLightbox(1)">
+            </div>
+            <div class="product-thumbnails" id="thumbnails1"></div>
+        </div>
+        <div class="desc" style="width: 50%; margin-top: 40px; padding: 50px;">
+            <p>MOGADNET COMPANY</p>
+                <h1>Panda Night Table Lamp</h1>
+                <p>Panda Night Light is a soft, BPA-free silicone night light with 3 brightness levels and a timer. It's perfect for kids and adults, offering comfort and relaxation. USB-chargeable and portable, it's a great gift for any occasion.</p>
+                <div style="display: flex; justify-content: center;align-items: center;"><h1>$125.00 </h1><span class="discount">50%</span></div>
+                <p class="overline">$250.00</p>
+                <button class="addItem" at-name="pandaLight" at-price="125"><i class="fa-solid fa-cart-shopping" style=" margin-right: 10px;"></i> Add to cart</button>
+
+        </div>
+    </div>
+
+    <!-- Second Product -->
+
+
+    <div class="product">
+        <div class="images" style="width: 50%;">
+            <div class="product-main-image">
+                <img id="mainImage2" src="Media/plants1.png" alt="Main Image" onclick="openLightbox(1)">
+            </div>
+            <div class="product-thumbnails" id="thumbnails2"></div>
+        </div>
+        <div class="desc" style="width: 50%; margin-top: 40px; padding: 50px;">
+            <p>GENERIC COMPANY</p>
+                <h1>Realistic Potted Plant</h1>
+                <p>Artificial Succulent Mini Plant is a realistic, high-gloss ornament for your Christmas tree. Made of cement and plastic, it's approximately 15x8cm and comes in green.</p>
+                <div style="display: flex; justify-content: center;align-items: center;"><h1>$100.00 </h1><span class="discount">50%</span></div>
+                <p class="overline">$200.00</p>
+                <button class="addItem" at-name="plants" at-price="100"><i class="fa-solid fa-cart-shopping" style=" margin-right: 10px;"></i> Add to cart</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-image" id="lightboxImage">
+    <div id="lightbox-thumbnails" class="lightbox-thumbnails"></div>
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+</div>
+
+<div id="cart" >
+    <span class="close" onclick="closeCart()">&times;</span>
+    <div >
+    <ul id="cartItems">
+        
+    </ul>
+    <h3 id="billTag">Total : $<span  id="totalBill">0</span></h3>    
+    </div>
+</div>
+
+<div id="addConfirm">
+    Item added successfully
+</div>
+
+<div id="removeConfirm">
+    Item removed successfully
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
